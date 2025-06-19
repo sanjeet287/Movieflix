@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.movieflix.subscriptionservice.SubscriptionServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.48 s -- in com.movieflix.subscriptionservice.SubscriptionServiceApplicationTests

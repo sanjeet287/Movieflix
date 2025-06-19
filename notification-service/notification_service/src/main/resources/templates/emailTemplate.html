@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <style>
+    .header { color: #e50914; font-size: 24px; }
+    .body { font-size: 16px; color: #333; }
+    .btn { background-color: #e50914; color: white; padding: 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="header">Hello, <span th:text="${username}">User</span>!</div>
+  <div class="body">
+    <p th:text="${message}">You have a new notification.</p>
+    <a th:href="${actionUrl}" class="btn">View Now</a>
+  </div>
+</body>
+</html>

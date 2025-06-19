@@ -1,0 +1,29 @@
+<configuration>
+
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/video-service.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- Daily rollover and max size per file -->
+            <fileNamePattern>logs/video-service.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+
+            <!-- Max file size before rolling to next index (e.g., 100MB) -->
+            <maxFileSize>100MB</maxFileSize>
+
+            <!-- Max number of 30 days to keep -->
+            <maxHistory>30</maxHistory>
+
+            <!-- Total size cap for all logs -->
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="ROLLING"/>
+    </root>
+
+</configuration>
